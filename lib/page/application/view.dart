@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter_wan/common/service/service.dart';
+import 'package:flutter_wan/common/service/z_service.dart';
 import 'package:flutter_wan/page/post/logic.dart';
 import 'package:flutter_wan/page/system/logic.dart';
 import 'package:get/get.dart';

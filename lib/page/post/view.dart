@@ -23,37 +23,42 @@ class PostPage extends GetView<PostLogic> {
               onPressed: () => _actionSearch(), icon: const Icon(Icons.search))
         ],
       ),
-      body: Obx(() => Padding(
-            padding: EdgeInsets.symmetric(horizontal: 5.w),
-            child: SmartRefresher(
-              controller: controller.refreshController,
-              enablePullUp: true,
-              enablePullDown: true,
-              onLoading: controller.onLoading,
-              onRefresh: controller.onRefresh,
-              child: CustomScrollView(
-                cacheExtent: 700,
-                slivers: [
-                  SliverToBoxAdapter(
-                    child: _buildBanner(controller.bannerList),
-                  ),
-                  SliverList(
-                    delegate: SliverChildBuilderDelegate((context, index) {
-                      return buildArticleItem(
-                          controller.articleList[index],
-                          () => controller.collectPost(),
-                          (name) => {
-                                AppRoutes.toArticlesPage(
-                                    name, GlobalConstants.AUTHOR, name),
-                              });
-                    },
-                        childCount: controller.articleList.length,
-                        semanticIndexOffset: 10),
-                  ),
-                ],
-              ),
-            ),
-          )),
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 5.w),
+        child: SmartRefresher(
+          controller: controller.refreshController,
+          enablePullUp: true,
+          enablePullDown: true,
+          onLoading: controller.onLoading,
+          onRefresh: controller.onRefresh,
+          child: CustomScrollView(
+            cacheExtent: 700,
+            slivers: [
+              GetBuilder<PostLogic>(
+                  id: controller.idBanner,
+                  builder: (logic) => SliverToBoxAdapter(
+                        child: _buildBanner(logic.bannerList),
+                      )),
+              GetBuilder<PostLogic>(
+                  id: controller.idPosts,
+                  builder: (logic) => SliverList(
+                        delegate: SliverChildBuilderDelegate((context, index) {
+                          return buildArticleItem(
+                              controller.articleList[index],
+                              () => controller.collectPost(index,
+                                  controller.articleList[index].id),
+                              (name) => {
+                                    AppRoutes.toArticlesPage(
+                                        name, GlobalConstants.AUTHOR, name),
+                                  });
+                        },
+                            childCount: controller.articleList.length,
+                            semanticIndexOffset: 10),
+                      )),
+            ],
+          ),
+        ),
+      ),
     );
   }
 

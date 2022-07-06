@@ -17,6 +17,9 @@ class CommonProvider extends BaseConnect {
   Future<Response> getSearchPost(int page, String queryKey) =>
       post('/article/query/$page/json', {}, query: {'k': queryKey});
 
+  /// 公众号
+  Future<Response> getWechatArticles()=>get('/wxarticle/chapters/json');
+
   ///**************System 体系****************
   /// 获取体系列表
   Future<Response> getSystemInfo() => get('/tree/json');
@@ -50,4 +53,8 @@ class CommonProvider extends BaseConnect {
 
   /// 用户信息
   Future<Response> getUserinfo() => get('/user/lg/userinfo/json');
+  /// 收藏文章
+  Future<Response> collectPost(int id)=>post('/lg/collect/$id/json',{});
+  /// 取消收藏文章
+  Future<Response> unCollectPost(int id)=>post('/lg/uncollect_originId/$id/json',{});
 }

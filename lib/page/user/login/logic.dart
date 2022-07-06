@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_wan/common/model/login_model.dart';
 import 'package:flutter_wan/common/provider/common_provider.dart';
 import 'package:get/get.dart';
-import '../../../common/service/service.dart';
+import '../../../common/service/z_service.dart';
 
-import '../../../common/utils/utils.dart';
+import '../../../common/utils/z_utils.dart';
 
 class LoginLogic extends GetxController {
   var provider = Get.find<CommonProvider>();

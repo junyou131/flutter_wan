@@ -5,8 +5,8 @@ import 'package:pull_to_refresh/pull_to_refresh.dart';
 import '../../../common/global/constants.dart';
 import '../../../common/model/z_model.dart';
 import '../../../common/route/app_routes.dart';
-import '../../../common/service/service.dart';
-import '../../../common/utils/utils.dart';
+import '../../../common/service/z_service.dart';
+import '../../../common/utils/z_utils.dart';
 
 class SystemArticlesLogic extends GetxController {
   var provider = Get.find<CommonProvider>();

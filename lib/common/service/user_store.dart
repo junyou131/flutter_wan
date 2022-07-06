@@ -1,6 +1,6 @@
 import 'package:flutter_wan/common/global/constants.dart';
 import 'package:flutter_wan/common/service/storage_service.dart';
-import 'package:flutter_wan/common/utils/utils.dart';
+import 'package:flutter_wan/common/utils/z_utils.dart';
 import 'package:get/get.dart';
 
 class UserStore extends GetxController {

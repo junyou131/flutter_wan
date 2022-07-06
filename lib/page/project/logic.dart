@@ -1,6 +1,6 @@
 import 'package:flutter_wan/common/model/project_item_model.dart';
 import 'package:flutter_wan/common/model/project_model.dart';
-import 'package:flutter_wan/common/utils/utils.dart';
+import 'package:flutter_wan/common/utils/z_utils.dart';
 import 'package:get/get.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 

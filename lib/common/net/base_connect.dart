@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter_wan/common/constants.dart';
-import 'package:flutter_wan/common/utils/utils.dart';
+import 'package:flutter_wan/common/utils/z_utils.dart';
 import 'package:get/get.dart';
 
 import '../global/constants.dart';

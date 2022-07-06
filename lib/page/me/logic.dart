@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_wan/common/route/app_routes.dart';
-import 'package:flutter_wan/common/utils/utils.dart';
+import 'package:flutter_wan/common/utils/z_utils.dart';
 import 'package:get/get.dart';
 
 import '../../common/model/z_model.dart';
 import '../../common/provider/common_provider.dart';
 import '../../common/res/z_res.dart';
-import '../../common/service/service.dart';
+import '../../common/service/z_service.dart';
 
 class TagItem {
   Widget icon;

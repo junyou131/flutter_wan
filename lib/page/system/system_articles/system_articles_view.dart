@@ -4,7 +4,7 @@ import 'package:flutter_wan/common/route/app_routes.dart';
 import 'package:get/get.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
-import '../../../common/utils/utils.dart';
+import '../../../common/utils/z_utils.dart';
 import '../../../common/widget/common_widget.dart';
 import 'system_articles_logic.dart';
 

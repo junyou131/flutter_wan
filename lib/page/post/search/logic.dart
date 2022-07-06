@@ -1,12 +1,12 @@
 import 'package:flutter_wan/common/model/hot_key_model.dart';
-import 'package:flutter_wan/common/utils/utils.dart';
+import 'package:flutter_wan/common/utils/z_utils.dart';
 import 'package:get/get.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 import '../../../common/model/z_model.dart';
 import '../../../common/provider/common_provider.dart';
 import '../../../common/route/app_routes.dart';
-import '../../../common/service/service.dart';
+import '../../../common/service/z_service.dart';
 
 class SearchLogic extends GetxController {
   var provider = Get.find<CommonProvider>();

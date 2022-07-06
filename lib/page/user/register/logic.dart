@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_wan/common/provider/common_provider.dart';
 import 'package:get/get.dart';
 
-import '../../../common/utils/utils.dart';
+import '../../../common/utils/z_utils.dart';
 
 class RegisterLogic extends GetxController {
   var provider = Get.find<CommonProvider>();
