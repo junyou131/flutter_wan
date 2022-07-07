@@ -87,21 +87,22 @@ class MePage extends GetView<MeLogic> {
 
   _buildTagLayout() {
     return logic.tags
-        .map((e) => Expanded(
-              flex: 1,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  e.icon,
-                  e.label,
-                ],
+        .map((e) => InkWell(
+              child: Expanded(
+                flex: 1,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    e.icon,
+                    e.label,
+                  ],
+                ),
               ),
             ))
         .toList();
   }
 
   _toSetting() {
-
     controller.toSetting();
   }
 
